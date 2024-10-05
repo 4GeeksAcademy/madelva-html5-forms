@@ -12,39 +12,39 @@
     <div class="container-fluid p-5">
         <div class="header bg-light p-3 rounded-top"><h4>Payment form example</h4></div>
 
-        <form class="container-fluid p-4">
+        <form class="col-12 p-4">
             <div class="alert alert-warning alert-dismissible fade show" role="alert"> Some fields are missing
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <div class="row">
-                <div class="col-5">
+                <div class="col-5 col-md-5 col-sm-12 col-xs-12">
                     <label class="col-form-label" for="CardImput"> Card #</label>
-                    <input type="text" class="form-control" id="CardImput" placeholder="00000000000000000000" pattern="[0-9]{20}">
+                    <input type="text" class="form-control" id="CardImput" placeholder="0000-0000-0000-0000-0000" required>
                 </div>
-                <div class="col-3">
+                <div class="col-3 col-md-3 col-sm-12 col-xs-12">
                     <label class="col-form-label" for="CardCvc"> CVC #</label>
-                    <input type="text" class="form-control" id="CardCvc" placeholder="000" pattern="[0-9]{3}">
+                    <input type="text" class="form-control" id="CardCvc" placeholder="000" pattern="[0-9]{3}" required>
                 </div>
-                <div class="col-4">
+                <div class="col-4 col-md-4 col-sm-12 col-xs-12">
                     <label class=" col-form-label" for="Amount"> Amount #</label>
-                    <input type="text" class="form-control" id="CardCvc" attern="[0-9]{10}">
+                    <input type="text" class="form-control" id="CardCvc" attern="[0-9]{10}" required>
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 col-md-6 col-sm-12 col-xs-12">
                     <fieldset>
                         <label class="col-form-label" for="FirstNameImput"> First name #</label>
-                        <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g">
+                        <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g" required>
                     </fieldset>
                     <fieldset>
                         <label class="col-form-label" for="CityImput"> City #</label>
-                        <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g">
+                        <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g" required>
                     </fieldset>    
                     <fieldset class="mt-3">
                         <label class="col-form-label" for="CardAccepted">We accept</label>
-                        <div class="col-6 bg-secondary p-3 rounded justify-content-evenly">
+                        <div class="col-12 bg-secondary p-3 rounded justify-content-evenly">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="CardType1" value="option1">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="CardType1" value="option1" required>
                                 <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -63,12 +63,12 @@
                     </fieldset>  
                 </div>
 
-                        <div class="col-6">
+                        <div class="col-6 col-md-6 col-sm-12 col-xs-12">
                             <label class="col-form-label" for="LastNameImput"> Last name</label>
-                            <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g">
+                            <input type="text" class="form-control" id="FirstNameImput" pattern="/[a-z]+/g" required>
                             <div class="d-flex gap-4">
                                 <div class="col">
-                                    <label class="col-6 col-form-label" for="StateSelector"> State #</label>
+                                    <label class="col-6 col-form-label" for="StateSelector" required> State #</label>
                                     <select class="form-select" id="StateSelector">
                                         <option selected>Pick a state:</option>
                                         <option value="option 1">1</option>
@@ -82,8 +82,8 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <label class="col-6 col-form-label" for="CityImput"> Postal code</label>
-                                    <input type="text" class="form-control" id="FirstNameImput" pattern="[0-9]{6}">
+                                    <label class="col-8 col-form-label" for="CityImput"> Postal code</label>
+                                    <input type="text" class="form-control" id="FirstNameImput" pattern="[0-9]{6}" required>
                                 </div>    
                             
                             </div>
@@ -98,9 +98,9 @@
                         
             </div>
             <div class="row">
-                <div class="d-flex justify-content-end bg-light p-3 rounded-bottom">
-                    <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                    <button class="btn btn-primary" type="button">Send</button>
+                <div class="d-flex justify-content-end bg-light p-3 rounded-bottom gap-2">
+                    <button class="btn btn-secondary me-md-2" type="submit">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
                 </div>
             </div>      
         </form>    
